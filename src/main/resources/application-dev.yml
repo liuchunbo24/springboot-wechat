@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.11.106/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.11.106
+    port: 6379
+server:
+  context-path: /sell
+
+wechat:
+  # 测试公众账号 ，授权
+  mpAppId: wx9f732072601398a6
+  mpAppSecret: d9db8b2065fec01c56f0a2f0eed4fc53
+
+  #师兄openId appid
+  openIdPro: oTgZpwe5LA1DiOoO4upolmjp7Q1c
+  mpAppIdPro: wxd898fcb01713c658
+
+  # 开放平台，卖家扫码登录用
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+
+  #支付/商户号
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  # 发起支付不需要证书，退款需要
+  keyPath: /weChatSystem/weixin_cert/h5.p12
+  notifyUrl : http://lcb666.natapp1.cc/sell/pay/notify
+  templateId:
+      orderStatus: 17d4xlTJDUQ27yERFtS2KDeaZ6OImf_7aqtOMJ9AKe4
+
+projectUrl:
+  wechatMpAuthorize: http://lcb666.natapp1.cc
+  wechatOpenAuthorize: http://sell.springboot.cn
+  sell: http://lcb666.natapp1.cc
+logging:
+  level:
+    com.imoooc.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+
+
+
+
+
+
